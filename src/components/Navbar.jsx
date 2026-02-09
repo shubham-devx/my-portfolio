@@ -3,7 +3,7 @@ import "../styless/Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2 className="logo">Mohan</h2>
+      <h2 className="logo">Shubham</h2>
       <ul>
         <li>Home</li>
         <li>About</li>
