@@ -1,4 +1,4 @@
-import "../styles/Skills.css";
+import "../styless/Skills.css";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 

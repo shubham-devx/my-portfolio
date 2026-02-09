@@ -1,4 +1,4 @@
-import "../styles/Projects.css";
+import "../styless/Projects.css";
 import { motion } from "framer-motion";
 
 function Projects() {
