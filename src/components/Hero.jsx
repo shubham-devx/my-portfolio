@@ -1,4 +1,4 @@
-import "../Styles/Hero.css";
+import "../styles/Hero.css";
 import { motion } from "framer-motion";
 
 function Hero() {

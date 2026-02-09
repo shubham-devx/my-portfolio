@@ -1,4 +1,4 @@
-import "../Styles/Projects.css";
+import "../styles/Projects.css";
 import { motion } from "framer-motion";
 
 function Projects() {
