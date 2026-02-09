@@ -1,0 +1,28 @@
+.about {
+  padding: 80px 50px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #334155;
+}
+
+.about .intro {
+  font-weight: 500;
+}
+
+.about .goal {
+  margin-top: 25px;
+  font-weight: 600;
+  color: #2563eb;
+}
