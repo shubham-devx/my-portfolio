@@ -9,7 +9,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Hi, I'm Mohan 👋
+        Hi, I'm Shubham 👋
       </motion.h1>
 
       <motion.h2
@@ -17,7 +17,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        Frontend Developer (React)
+        Full Stack Developer 
       </motion.h2>
 
       <motion.p

@@ -13,8 +13,7 @@ function About() {
       </motion.h2>
 
       <p className="intro">
-        I’m a passionate Frontend Developer with a strong interest in building
-        clean, responsive, and user-friendly web applications.
+        I’m Shubham Verma, a Computer Science Engineering student and Full Stack Developer with hands-on experience in building responsive, secure, and scalable web applications. I enjoy working across the development lifecycle—from crafting clean user interfaces to designing structured backend workflows.
       </p>
 
       <p>
