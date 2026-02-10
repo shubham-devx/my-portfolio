@@ -17,7 +17,7 @@ function About() {
       </p>
 
       <p>
-        I primarily work with <strong>React.js</strong> and enjoy turning complex
+        I primarily work with <strong>React.js,Node.js,MySL,Git& GitHub</strong> and enjoy turning complex
         problems into simple, elegant solutions.
       </p>
 
