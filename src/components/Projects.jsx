@@ -29,8 +29,8 @@ function Projects() {
           <p className="tech">Tech: React, CSS</p>
 
           <div className="project-links">
-            <a href="https://github.com/shubham-devx" target="_blank" rel="noreferrer">Live Demo</a>
-            <a href="https://github.com/shubham-devx" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://taskflow-pwa-psi.vercel.app/?_vercel_share=gY188h3DOmSEnAhEySIvYuS66FxQTO6X" target="_blank" rel="noreferrer">Live Demo</a>
+            <a href="https://github.com/shubham-devx/taskflow-pwa.git" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </motion.div>
 
@@ -69,8 +69,8 @@ function Projects() {
           <p className="tech">Tech: JavaScript, API</p>
 
           <div className="project-links">
-            <a href="https://github.com/shubham-devx" target="_blank" rel="noreferrer">Live Demo</a>
-            <a href="https://github.com/shubham-devx" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://weather-app-seven-psi-82.vercel.app?_vercel_share=BzTUdEfUrY9o3mdCx3LIi834UwwQvnAW" target="_blank" rel="noreferrer">Live Demo</a>
+            <a href="https://github.com/shubham-devx/weather-app.git" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </motion.div>
 
