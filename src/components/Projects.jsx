@@ -24,7 +24,7 @@ function Projects() {
           <h3>Todo App</h3>
           <p>
             A simple and user-friendly Todo application to add, delete, and
-            manage daily tasks.
+            manage daily tasks.But now working on it......
           </p>
           <p className="tech">Tech: React, CSS</p>
 
@@ -64,7 +64,7 @@ function Projects() {
           <h3>Weather App</h3>
           <p>
             A weather application that fetches real-time weather data using an
-            API.
+            API.But now working on it......
           </p>
           <p className="tech">Tech: JavaScript, API</p>
 
