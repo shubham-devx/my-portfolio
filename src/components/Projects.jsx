@@ -49,8 +49,8 @@ function Projects() {
           <p className="tech">Tech: React, CSS</p>
 
           <div className="project-links">
-            <a href="https://github.com/shubham-devx" target="_blank" rel="noreferrer">Live Demo</a>
-            <a href="https://github.com/shubham-devx" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://my-portfolio-jtk1.vercel.app/" target="_blank" rel="noreferrer">Live Demo</a>
+            <a href="https://github.com/shubham-devx/my-portfolio.git" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </motion.div>
 

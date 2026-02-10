@@ -19,11 +19,11 @@ function Contact() {
       </form>
 
       <div className="contact-links">
-        <a href="mailto:yourmail@gmail.com">📧 Email</a>
-        <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+        <a href="mailto:subhamv2003@gmail.com">📧 Email</a>
+        <a href="https://github.com/shubham-devx" target="_blank" rel="noreferrer">
           💻 GitHub
         </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/shubham-verma-bbb84b1b9?" target="_blank" rel="noreferrer">
           🔗 LinkedIn
         </a>
       </div>
