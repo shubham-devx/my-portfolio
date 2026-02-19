@@ -10,7 +10,7 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "Yr2Mizn9clBOdb63-wvbz",     // Service ID
+        "service_ngbdt7x",     // Service ID
         "template_jyhthhc",         // Template ID
         form.current,
         "WFF-R36gGSw8EcmQB"          // Public Key
