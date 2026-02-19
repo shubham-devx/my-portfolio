@@ -28,12 +28,12 @@ function Hero() {
         I build clean and responsive web applications.
       </motion.p>
 
-      <motion.button
+      {/* <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
         View Projects
-      </motion.button>
+      </motion.button> */}
     </section>
   );
 }
