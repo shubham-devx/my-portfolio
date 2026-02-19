@@ -28,6 +28,15 @@ function Projects() {
       live: "https://weather-app-seven-psi-82.vercel.app?_vercel_share=BzTUdEfUrY9o3mdCx3LIi834UwwQvnAW",
       github: "https://github.com/shubham-devx/weather-app.git",
     },
+    {
+      name: "Global-Intelligence-Analysis",
+      description:
+        "A global intelligence analysis data using an API.",
+      tech: "JavaScript, API",
+      live: "https://global-intelligence-analysis.vercel.app",
+      github: "https://github.com/shubham-devx/GLOBAL-INTELLIGENCE-ANALYSIS.git",
+    },
+    
   ];
 
   return (
