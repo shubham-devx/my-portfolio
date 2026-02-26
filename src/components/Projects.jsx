@@ -36,7 +36,14 @@ function Projects() {
       live: "https://global-intelligence-analysis.vercel.app",
       github: "https://github.com/shubham-devx/GLOBAL-INTELLIGENCE-ANALYSIS.git",
     },
-    
+    {
+      name: "AI GYM TRAINER",
+      description:
+        "An agent who will help you to achive your body as you want to be.",
+      tech: "JavaScript, API",
+      live: "https://fintness-tracker-agent-client.vercel.app",
+      github: "https://github.com/shubham-devx",
+    },
   ];
 
   return (
