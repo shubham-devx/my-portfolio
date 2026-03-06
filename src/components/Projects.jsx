@@ -8,7 +8,7 @@ function Projects() {
       name: "Todo App",
       description:
         "A simple and user-friendly Todo application to add, delete, and manage daily tasks.",
-      tech: "React, CSS",
+      tech: "React.js, JavaScript (ES6+), HTML5, CSS3",
       live: "https://taskflow-pwa-psi.vercel.app/?_vercel_share=gY188h3DOmSEnAhEySIvYuS66FxQTO6X",
       github: "https://github.com/shubham-devx/taskflow-pwa.git",
     },
@@ -16,7 +16,7 @@ function Projects() {
       name: "Portfolio Website",
       description:
         "A personal portfolio website to showcase my skills, projects, and contact information.",
-      tech: "React, CSS",
+      tech: "React.js, JavaScript (ES6+), HTML5, CSS3",
       live: "https://my-portfolio-jtk1.vercel.app/",
       github: "https://github.com/shubham-devx/my-portfolio.git",
     },
@@ -24,15 +24,15 @@ function Projects() {
       name: "Weather App",
       description:
         "A weather application that fetches real-time weather data using an API.",
-      tech: "JavaScript, API",
+      tech: "React.js, JavaScript (ES6+), HTML5, CSS3, OpenWeather API, Axios / Fetch API, REST APIs",
       live: "https://weather-app-seven-psi-82.vercel.app?_vercel_share=BzTUdEfUrY9o3mdCx3LIi834UwwQvnAW",
       github: "https://github.com/shubham-devx/weather-app.git",
     },
     {
       name: "Global-Intelligence-Analysis",
       description:
-        "A global intelligence analysis data using an API.",
-      tech: "JavaScript, API",
+        "A global intelligence analysis data using an OpenAPI.",
+      tech: "Python, Pandas, NumPy, OpenAI API, Data Analysis, Web Scraping, Financial APIs, CLI Tools, Git, GitHub.",
       live: "https://global-intelligence-analysis.vercel.app",
       github: "https://github.com/shubham-devx/GLOBAL-INTELLIGENCE-ANALYSIS.git",
     },
@@ -40,9 +40,17 @@ function Projects() {
       name: "AI GYM TRAINER",
       description:
         "An agent who will help you to achive your body as you want to be.",
-      tech: "JavaScript, API",
+      tech: "React.js, HTML5, CSS3, JavaScript (ES6+), Node.js, Express.js, OpenAI API, Prompt Engineering, Axios, REST APIs",
       live: "https://fintness-tracker-agent-client.vercel.app",
       github: "https://github.com/shubham-devx",
+    },
+    {
+      name: "AI-Powered Price Analytics Dashboard",
+      description:
+        "Product Search,Trend Visualization ,Auto-refresh(use only dummy/mock data).",
+      tech: "React.js, HTML5, CSS3, JavaScript (ES6+), Node.js, Express.js, OpenAI API, Prompt Engineering, Axios, REST APIs",
+      githubBackend: "https://lnkd.in/ecWDTrxp",
+      githubFrontend: "https://lnkd.in/eKqnsgmx",
     },
   ];
 
