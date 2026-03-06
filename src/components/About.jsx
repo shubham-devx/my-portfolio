@@ -13,16 +13,17 @@ function About() {
       </motion.h2>
 
       <p className="intro">
-        I’m Shubham Verma, a Computer Science Engineering student and Full Stack Developer with hands-on experience in building responsive, secure, and scalable web applications. I enjoy working across the development lifecycle—from crafting clean user interfaces to designing structured backend workflows.
+        I’m Shubham Verma, a Computer Science Engineering student passionate about building modern web applications. As a Full Stack Developer, I work across both frontend and backend to create responsive, scalable, and user-friendly digital experiences.
       </p>
 
       <p>
-        I primarily work with <strong>React.js,Node.js,MySQL,Git& GitHub</strong> and enjoy turning complex
-        problems into simple, elegant solutions.
+        My core stack includes <strong>HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB, MySQL and Git& GitHub</strong> I’m also exploring AI integration and prompt engineering to develop intelligent and interactive applications.
+
+I enjoy solving real-world problems through code and continuously improving my skills by building projects and experimenting with new technologies.
       </p>
 
       <p className="goal">
-        🚀 My goal is to join a growth-oriented company and grow as a developer.
+        🚀 My goal is to grow as a developer while contributing to impactful and innovative products.
       </p>
     </section>
   );
