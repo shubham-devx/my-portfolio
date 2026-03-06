@@ -1,17 +1,32 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 50px;
-  background: #0f172a;
+
+  /* Blue → White Gradient */
+  background: linear-gradient(90deg, #1e3c72, #2a5298, #ffffff);
+
   color: white;
 }
 
+/* Navbar Links */
 .navbar ul {
   display: flex;
   list-style: none;
   gap: 25px;
 }
 
+/* Each link */
 .navbar li {
   cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.navbar li:hover {
+  color: #00bfff;
 }

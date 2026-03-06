@@ -1,6 +1,6 @@
 import "../styless/Skills.css";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt,SiMongod, SiExpress , SiOpenai } from "react-icons/fa";
-import { SiMysql } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt ,FaRobot } from "react-icons/fa";
+import { SiMysql ,SiMongodb, SiExpress } from "react-icons/si";
 
 function Skills() {
   return (
@@ -39,18 +39,18 @@ function Skills() {
         </div>
 
 <div className="skill-card">
-  <SiMongodb size={40} color="#47A248" />
-  <h3>MongoDB</h3>
+  <SiMongodb className="icon mongodb" />
+  <p>MongoDB</p>
 </div>
 
 <div className="skill-card">
-  <SiExpress size={40} color="#000000" />
-  <h3>Express.js</h3>
+  <SiExpress className="icon express" />
+  <p>Express.js</p>
 </div>
 
 <div className="skill-card">
-  <SiOpenai size={40} color="#10A37F" />
-  <h3>AI Integration</h3>
+  <FaRobot className="icon ai" />
+  <p>AI</p>
 </div>
         <div className="skill-card">
           <FaGitAlt className="icon git" />
