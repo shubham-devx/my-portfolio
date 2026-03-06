@@ -45,12 +45,20 @@ function Projects() {
       github: "https://github.com/shubham-devx",
     },
     {
-      name: "AI-Powered Price Analytics Dashboard",
+      name: "AI GYM TRAINER",
       description:
-        "Product Search,Trend Visualization ,Auto-refresh(use only dummy/mock data).",
+        "An agent who will help you to achive your body as you want to be.",
       tech: "React.js, HTML5, CSS3, JavaScript (ES6+), Node.js, Express.js, OpenAI API, Prompt Engineering, Axios, REST APIs",
-      githubBackend: "https://github.com/shubham-devx/priceTrackerServer.git",
-      githubFrontend: "https://github.com/shubham-devx/priceTrackerClient.git",
+      live: "https://fintness-tracker-agent-client.vercel.app",
+      github: "https://github.com/shubham-devx",
+    },
+    {
+      name: "Digital-Temple",
+      description:
+        "A digital temple platform offering virtual worship features like aarti, diya lighting, bell ringing, Gita quotes, and a community prayer wall.",
+      tech: "React.js, Vite, JavaScript, HTML, CSS, React Router, Vercel",
+      live: "https://digital-temple.vercel.app",
+      github: "https://github.com/shubham-devx",
     },
   ];
 
