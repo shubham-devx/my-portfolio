@@ -49,8 +49,8 @@ function Projects() {
       description:
         "Product Search,Trend Visualization ,Auto-refresh(use only dummy/mock data).",
       tech: "React.js, HTML5, CSS3, JavaScript (ES6+), Node.js, Express.js, OpenAI API, Prompt Engineering, Axios, REST APIs",
-      githubBackend: "https://lnkd.in/ecWDTrxp",
-      githubFrontend: "https://lnkd.in/eKqnsgmx",
+      githubBackend: "https://github.com/shubham-devx/priceTrackerServer.git",
+      githubFrontend: "https://github.com/shubham-devx/priceTrackerClient.git",
     },
   ];
 
