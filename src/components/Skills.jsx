@@ -1,5 +1,5 @@
 import "../styless/Skills.css";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt,SiMongod, SiExpress , SiOpenai } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 
 function Skills() {
@@ -38,6 +38,20 @@ function Skills() {
           <p>MySQL</p>
         </div>
 
+<div className="skill-card">
+  <SiMongodb size={40} color="#47A248" />
+  <h3>MongoDB</h3>
+</div>
+
+<div className="skill-card">
+  <SiExpress size={40} color="#000000" />
+  <h3>Express.js</h3>
+</div>
+
+<div className="skill-card">
+  <SiOpenai size={40} color="#10A37F" />
+  <h3>AI Integration</h3>
+</div>
         <div className="skill-card">
           <FaGitAlt className="icon git" />
           <p>Git & GitHub</p>
