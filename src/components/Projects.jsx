@@ -58,7 +58,7 @@ function Projects() {
         "A digital temple platform offering virtual worship features like aarti, diya lighting, bell ringing, Gita quotes, and a community prayer wall.",
       tech: "React.js, Vite, JavaScript, HTML, CSS, React Router, Vercel",
       live: "https://digital-temple.vercel.app",
-      github: "https://github.com/shubham-devx",
+      github: "https://github.com/shubham-devx/digitalTemple.git",
     },
   ];
 
