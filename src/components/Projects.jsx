@@ -36,14 +36,7 @@ function Projects() {
       live: "https://global-intelligence-analysis.vercel.app",
       github: "https://github.com/shubham-devx/GLOBAL-INTELLIGENCE-ANALYSIS.git",
     },
-    {
-      name: "AI GYM TRAINER",
-      description:
-        "An agent who will help you to achive your body as you want to be.",
-      tech: "React.js, HTML5, CSS3, JavaScript (ES6+), Node.js, Express.js, OpenAI API, Prompt Engineering, Axios, REST APIs",
-      live: "https://fintness-tracker-agent-client.vercel.app",
-      github: "https://github.com/shubham-devx",
-    },
+    
     {
       name: "AI GYM TRAINER",
       description:
@@ -59,6 +52,14 @@ function Projects() {
       tech: "React.js, Vite, JavaScript, HTML, CSS, React Router, Vercel",
       live: "https://digital-temple.vercel.app",
       github: "https://github.com/shubham-devx/digitalTemple.git",
+    },
+    {
+      name: "Fit Tracker",
+      description:
+        "Bascially, It is very helpful for me because it helps a lot to maintain my diet.",
+      tech: "React.js, HTML5, CSS3, JavaScript (ES6+)",
+      live: "https://fit-tracker-by-shubham.vercel.app",
+      github: "https://github.com/shubham-devx",
     },
   ];
 
