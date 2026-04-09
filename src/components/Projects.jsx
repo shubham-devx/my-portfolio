@@ -2,62 +2,60 @@ import "../styless/Projects.css";
 import { motion } from "framer-motion";
 
 function Projects() {
-
   const projects = [
     {
       name: "Todo App",
       description:
-        "A simple and user-friendly Todo application to add, delete, and manage daily tasks.",
-      tech: "React.js, JavaScript (ES6+), HTML5, CSS3",
+        "A simple and user-friendly Todo application to manage daily tasks.",
+      tech: "React.js • JavaScript • HTML • CSS",
       live: "https://taskflow-pwa-psi.vercel.app/?_vercel_share=gY188h3DOmSEnAhEySIvYuS66FxQTO6X",
       github: "https://github.com/shubham-devx/taskflow-pwa.git",
     },
     {
       name: "Portfolio Website",
       description:
-        "A personal portfolio website to showcase my skills, projects, and contact information.",
-      tech: "React.js, JavaScript (ES6+), HTML5, CSS3",
+        "A personal portfolio to showcase skills and projects.",
+      tech: "React.js • JavaScript • HTML • CSS",
       live: "https://my-portfolio-jtk1.vercel.app/",
       github: "https://github.com/shubham-devx/my-portfolio.git",
     },
     {
       name: "Weather App",
       description:
-        "A weather application that fetches real-time weather data using an API.",
-      tech: "React.js, JavaScript (ES6+), HTML5, CSS3, OpenWeather API, Axios / Fetch API, REST APIs",
+        "Real-time weather app using API integration.",
+      tech: "React • API • JavaScript",
       live: "https://weather-app-seven-psi-82.vercel.app?_vercel_share=BzTUdEfUrY9o3mdCx3LIi834UwwQvnAW",
       github: "https://github.com/shubham-devx/weather-app.git",
     },
     {
-      name: "Global-Intelligence-Analysis",
+      name: "Global Intelligence Analysis",
       description:
-        "A global intelligence analysis data using an OpenAPI.",
-      tech: "Python, Pandas, NumPy, OpenAI API, Data Analysis, Web Scraping, Financial APIs, CLI Tools, Git, GitHub.",
+        "Global intelligence data analysis using APIs.",
+      tech: "Python • Pandas • OpenAI • Data Analysis",
       live: "https://global-intelligence-analysis.vercel.app",
       github: "https://github.com/shubham-devx/GLOBAL-INTELLIGENCE-ANALYSIS.git",
     },
-    
     {
-      name: "AI GYM TRAINER",
+      name: "AI Gym Trainer",
       description:
-        "An agent who will help you to achive your body as you want to be.",
-      tech: "React.js, HTML5, CSS3, JavaScript (ES6+), Node.js, Express.js, OpenAI API, Prompt Engineering, Axios, REST APIs",
+        "AI-powered fitness assistant for personalized workouts.",
+      tech: "MERN • OpenAI • Prompt Engineering",
       live: "https://fintness-tracker-agent-client.vercel.app",
       github: "https://github.com/shubham-devx",
     },
     {
-      name: "Digital-Temple",
+      name: "Digital Temple",
       description:
-        "A digital temple platform offering virtual worship features like aarti, diya lighting, bell ringing, Gita quotes, and a community prayer wall.",
-      tech: "React.js, Vite, JavaScript, HTML, CSS, React Router, Vercel",
+        "Virtual worship platform with interactive features.",
+      tech: "React • Router • Vercel",
       live: "https://digital-temple.vercel.app",
       github: "https://github.com/shubham-devx/digitalTemple.git",
     },
     {
       name: "Fit Tracker",
       description:
-        "Bascially, It is very helpful for me because it helps a lot to maintain my diet.",
-      tech: "React.js, HTML5, CSS3, JavaScript (ES6+)",
+        "Personal fitness tracking application.",
+      tech: "React • JavaScript • CSS",
       live: "https://fit-tracker-by-shubham.vercel.app",
       github: "https://github.com/shubham-devx",
     },
@@ -66,11 +64,10 @@ function Projects() {
   return (
     <section className="projects" id="projects">
       <motion.h2
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
       >
-        My Projects
+        Projects
       </motion.h2>
 
       <div className="projects-grid">
@@ -80,28 +77,19 @@ function Projects() {
             key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ delay: index * 0.05 }}
             whileHover={{ scale: 1.03 }}
           >
             <h3>{project.name}</h3>
             <p>{project.description}</p>
-            <p className="tech">Tech: {project.tech}</p>
+            <span className="tech">{project.tech}</span>
 
             <div className="project-links">
-              <a
-                href={project.live}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Live Demo
+              <a href={project.live} target="_blank" rel="noreferrer">
+                Live →
               </a>
-
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
+              <a href={project.github} target="_blank" rel="noreferrer">
+                Code →
               </a>
             </div>
           </motion.div>

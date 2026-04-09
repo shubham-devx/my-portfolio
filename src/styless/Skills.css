@@ -1,49 +1,57 @@
 .skills {
-  padding: 80px 50px;
-  background: #f8fafc;
+  padding: 120px 10%;
   text-align: center;
 }
 
+/* HEADING */
 .skills h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #0f172a;
+  font-size: 40px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 60px;
 }
 
+/* GRID */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 25px;
-  max-width: 900px;
+  gap: 40px;
+  max-width: 800px;
   margin: auto;
 }
 
+/* CARD (CLEAN APPLE STYLE) */
 .skill-card {
-  background: white;
-  padding: 25px 10px;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
+/* HOVER */
 .skill-card:hover {
-  transform: translateY(-6px);
+  transform: scale(1.08);
 }
 
+/* ICON */
 .icon {
-  font-size: 45px;
-  margin-bottom: 10px;
+  font-size: 42px;
+  margin-bottom: 12px;
 }
 
+/* TEXT */
+.skill-card p {
+  font-size: 14px;
+  color: #6e6e73;
+}
+
+/* COLORS */
 .html { color: #e34c26; }
 .css { color: #264de4; }
 .js { color: #f7df1e; }
 .react { color: #61dafb; }
 .node { color: #3c873a; }
 .mysql { color: #00758f; }
+.mongodb { color: #47a248; }
+.express { color: #000000; }
+.ai { color: #0071e3; }
 .git { color: #f1502f; }
-
-.skill-card p {
-  font-size: 16px;
-  font-weight: 500;
-}

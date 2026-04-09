@@ -2,47 +2,45 @@ import "../styless/Hero.css";
 import { motion } from "framer-motion";
 
 function Hero() {
+  const scrollToProjects = () => {
+    document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="hero" id="home">
-      <div className="hero-content">
 
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Hi, I'm Shubham 👋
-        </motion.h1>
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Hi, I’m Shubham.
+      </motion.h1>
 
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          Full Stack Developer
-        </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        Full Stack Developer
+      </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-        >
-          I build clean and responsive web applications.
-        </motion.p>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+      >
+        I design and build clean, scalable and AI-powered web applications.
+      </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-        >
-          <a href="#projects">
-            <button className="hero-btn">
-              View Projects
-            </button>
-          </a>
-        </motion.div>
+      <motion.button
+        onClick={scrollToProjects}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        View Work →
+      </motion.button>
 
-      </div>
     </section>
   );
 }

@@ -1,32 +1,61 @@
+/* NAVBAR CONTAINER */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 20px 10% 40px;
 
-  /* Blue → White Gradient */
-  background: linear-gradient(90deg, #1e3c72, #2a5298, #ffffff);
+  /* Apple-style glass effect */
+  background:skyblue;
+  
 
-  color: white;
+  
+  top: 0;
+  z-index: 100;
+
+  border-bottom: 1px solid #e5e5e5;
 }
 
-/* Navbar Links */
-.navbar ul {
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+/* NAV LINKS */
+.nav-links {
   display: flex;
+  gap: 30px;
   list-style: none;
-  gap: 25px;
 }
 
-/* Each link */
-.navbar li {
-  cursor: pointer;
-  font-size: 18px;
+/* LINKS */
+.nav-links a {
+  text-decoration: none;
+  color: #6e6e73;
+  font-size: 14px;
   font-weight: 500;
-  color: white;
+  position: relative;
   transition: 0.3s;
 }
 
-/* Hover Effect */
-.navbar li:hover {
-  color: #00bfff;
+/* HOVER EFFECT (APPLE STYLE UNDERLINE) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #0071e3;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1d1d1f;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
