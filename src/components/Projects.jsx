@@ -11,14 +11,7 @@ function Projects() {
       live: "https://taskflow-pwa-psi.vercel.app/?_vercel_share=gY188h3DOmSEnAhEySIvYuS66FxQTO6X",
       github: "https://github.com/shubham-devx/taskflow-pwa.git",
     },
-    {
-      name: "Portfolio Website",
-      description:
-        "A personal portfolio to showcase skills and projects.",
-      tech: "React.js • JavaScript • HTML • CSS",
-      live: "https://my-portfolio-jtk1.vercel.app/",
-      github: "https://github.com/shubham-devx/my-portfolio.git",
-    },
+    
     {
       name: "Weather App",
       description:
@@ -57,6 +50,14 @@ function Projects() {
         "Personal fitness tracking application.",
       tech: "React • JavaScript • CSS",
       live: "https://fit-tracker-by-shubham.vercel.app",
+      github: "https://github.com/shubham-devx",
+    },
+    {
+      name: "SpamSense AI",
+      description:
+        "AI-powered SMS fraud detection system that classifies messages as spam or safe in real time using machine learning.",
+      tech: "Python, Streamlit, Scikit-learn, NLP(TF-IDF)",
+      live: "https://ai-scam-detector-38gup2dgmpwfpxaucro6sq.streamlit.app/",
       github: "https://github.com/shubham-devx",
     },
   ];
