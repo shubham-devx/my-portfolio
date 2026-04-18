@@ -4,15 +4,15 @@ function Certifications() {
   const certs = [
     {
       title: "AI Mastery Course",
-      link: "https://drive.google.com/file/d/1zzGZamCIcNlVQdYHY2gYL78pxe8AabEK/view?usp=drivesdk",
+      link: "https://drive.google.com/file/d/1zzGZamCIcNlVQdYHY2gYL78pxe8AabEK/view",
     },
     {
       title: "Internship Completion Certificate",
-      link: "https://drive.google.com/file/d/1tdWNO6x3a4Vapvq3CKTSJA1kFPetUbb6/view?usp=drivesdk",
+      link: "https://drive.google.com/file/d/1tdWNO6x3a4Vapvq3CKTSJA1kFPetUbb6/view",
     },
     {
       title: "Java Hybrid Development – 1Stop.ai",
-      link: "https://drive.google.com/file/d/1vLVSmGAPPI0s5V4lyJpI982kfGNVg2pb/view?usp=drivesdk",
+      link: "https://drive.google.com/file/d/1vLVSmGAPPI0s5V4lyJpI982kfGNVg2pb/view",
     },
   ];
 
@@ -26,7 +26,7 @@ function Certifications() {
             key={index}
             href={cert.link}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="cert-card"
           >
             <div className="cert-content">
