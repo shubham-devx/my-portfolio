@@ -50,7 +50,7 @@ function Projects() {
         "Personal fitness tracking application.",
       tech: "React • JavaScript • CSS",
       live: "https://fit-tracker-by-shubham.vercel.app",
-      github: "https://github.com/shubham-devx",
+      github: "https://github.com/shubham-devx/fit-tracker-by-shubham.git",
     },
     {
       name: "SpamSense AI",
@@ -58,7 +58,15 @@ function Projects() {
         "AI-powered SMS fraud detection system that classifies messages as spam or safe in real time using machine learning.",
       tech: "Python, Streamlit, Scikit-learn, NLP(TF-IDF)",
       live: "https://ai-scam-detector-38gup2dgmpwfpxaucro6sq.streamlit.app/",
-      github: "https://github.com/shubham-devx",
+      github: "https://github.com/shubham-devx/ai-scam-detector.git",
+    },
+    {
+      name: "Couple Capsule",
+      description:
+        "Couple Capsule ❤️ is a private memory-sharing app for couples to save moments, letters, and emotional memories together.",
+      tech: "React.js ,Tailwind CSS , Node.js , Express.js, MongoDB , Framer Motion , Vercel , Render , Capacitor Android",
+      live: "https://couple-capsule-six.vercel.app?_vercel_share=xLE85phuhDqxolrPFPPNVxRowbfzTGBA",
+      github: "https://github.com/shubham-devx/couple-capsule.git",
     },
   ];
 
