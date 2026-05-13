@@ -1,28 +1,51 @@
-/* GLOBAL RESET */
+/* ===== GLOBAL RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
-  background: #ffffff;
-  color: #1d1d1f;
+/* ===== ROOT COLORS ===== */
+:root {
+  --bg: #0b1120;
+  --card: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.08);
+
+  --text: #f8fafc;
+  --subtext: #94a3b8;
+
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
 }
 
-/* APP WRAPPER */
-.app {
+/* ===== BODY ===== */
+body {
+  font-family: Inter, sans-serif;
+  background:
+    radial-gradient(circle at top left, #1e3a8a 0%, transparent 30%),
+    radial-gradient(circle at bottom right, #0f172a 0%, transparent 30%),
+    var(--bg);
+
+  color: var(--text);
   overflow-x: hidden;
 }
 
-/* GLOBAL SECTION SPACING */
+/* ===== SMOOTH SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== GLOBAL SECTION ===== */
 section {
   padding: 120px 10%;
 }
 
-/* SMOOTH SCROLL */
-html {
-  scroll-behavior: smooth;
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
 }

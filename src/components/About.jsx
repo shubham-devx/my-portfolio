@@ -1,53 +1,65 @@
 import "../styless/About.css";
 import { motion } from "framer-motion";
+import { FaCode, FaBrain, FaRocket } from "react-icons/fa";
 
 function About() {
+  const cards = [
+    {
+      icon: <FaCode />,
+      title: "Full Stack Development",
+      desc: "Building scalable MERN stack applications with modern UI & backend architecture.",
+    },
+    {
+      icon: <FaBrain />,
+      title: "AI Integration",
+      desc: "Exploring AI-powered solutions using OpenAI APIs and intelligent automation.",
+    },
+    {
+      icon: <FaRocket />,
+      title: "Growth Mindset",
+      desc: "Focused on continuous learning, clean code practices and impactful products.",
+    },
+  ];
+
   return (
     <section className="about" id="about">
 
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
+      {/* SECTION TITLE */}
+      <motion.div
+        className="about-header"
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.7 }}
       >
-        About Me
-      </motion.h2>
+        <h2>About Me</h2>
 
-      <motion.p
-        className="intro"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-      >
-        I’m Shubham Verma, a Computer Science Engineering student and Full Stack Developer
-        passionate about building modern web applications.
-      </motion.p>
+        <p>
+          Passionate about creating modern web applications,
+          solving real-world problems and building impactful digital experiences.
+        </p>
+      </motion.div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-      >
-        I work with technologies like React.js, Node.js, Express.js, MongoDB, and MySQL.
-        I also explore AI integration to build smarter and more interactive applications.
-      </motion.p>
+      {/* GLASS CARDS */}
+      <div className="about-grid">
+        {cards.map((card, index) => (
+          <motion.div
+            className="about-card"
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.2 }}
+            whileHover={{ y: -10 }}
+          >
+            <div className="about-icon">
+              {card.icon}
+            </div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.6 }}
-      >
-        I enjoy solving real-world problems through clean UI and scalable backend systems.
-      </motion.p>
+            <h3>{card.title}</h3>
 
-      <motion.p
-        className="goal"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-      >
-        🚀 My goal is to grow as a developer and build impactful products.
-      </motion.p>
+            <p>{card.desc}</p>
+          </motion.div>
+        ))}
+      </div>
 
     </section>
   );

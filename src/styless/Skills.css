@@ -1,57 +1,114 @@
+/* SECTION */
 .skills {
-  padding: 120px 10%;
-  text-align: center;
+  position: relative;
 }
 
-/* HEADING */
-.skills h2 {
-  font-size: 40px;
-  font-weight: 600;
-  color: #1d1d1f;
-  margin-bottom: 60px;
+/* HEADER */
+.skills-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.skills-header h2 {
+
+  font-size: 52px;
+  margin-bottom: 18px;
+
+  color: #ffffff;
+}
+
+.skills-header p {
+
+  max-width: 700px;
+  margin: auto;
+
+  color: #94a3b8;
+
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 /* GRID */
 .skills-grid {
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 40px;
-  max-width: 800px;
-  margin: auto;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: 28px;
 }
 
-/* CARD (CLEAN APPLE STYLE) */
+/* CARD */
 .skill-card {
-  padding: 20px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
+
+  position: relative;
+
+  padding: 35px 20px;
+
+  border-radius: 24px;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  text-align: center;
+
+  transition: 0.4s ease;
 }
 
 /* HOVER */
 .skill-card:hover {
-  transform: scale(1.08);
+
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(59, 130, 246, 0.5);
+
+  box-shadow:
+    0 15px 40px rgba(59, 130, 246, 0.15);
 }
 
 /* ICON */
-.icon {
-  font-size: 42px;
-  margin-bottom: 12px;
+.skill-icon {
+
+  font-size: 52px;
+
+  margin-bottom: 20px;
 }
 
-/* TEXT */
-.skill-card p {
-  font-size: 14px;
-  color: #6e6e73;
+/* TITLE */
+.skill-card h3 {
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #ffffff;
 }
 
-/* COLORS */
-.html { color: #e34c26; }
-.css { color: #264de4; }
-.js { color: #f7df1e; }
-.react { color: #61dafb; }
-.node { color: #3c873a; }
-.mysql { color: #00758f; }
-.mongodb { color: #47a248; }
-.express { color: #000000; }
-.ai { color: #0071e3; }
-.git { color: #f1502f; }
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .skills-header h2 {
+    font-size: 38px;
+  }
+
+  .skills-grid {
+
+    grid-template-columns:
+      repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .skill-card {
+    padding: 28px 18px;
+  }
+
+  .skill-icon {
+    font-size: 42px;
+  }
+}

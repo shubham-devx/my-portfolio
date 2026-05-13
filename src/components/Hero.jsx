@@ -1,75 +1,51 @@
-// import "../styless/Hero.css";
-// import { motion } from "framer-motion";
-
-// function Hero() {
-//   const scrollToProjects = () => {
-//     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
-//   };
-
-//   return (
-//     <section className="hero" id="home">
-
-//       <motion.h1
-//         initial={{ opacity: 0, y: 30 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.8 }}
-//       >
-//         Hi, I’m Shubham.
-//       </motion.h1>
-
-//       <motion.h2
-//         initial={{ opacity: 0 }}
-//         animate={{ opacity: 1 }}
-//         transition={{ delay: 0.3 }}
-//       >
-//         Full Stack Developer
-//       </motion.h2>
-
-//       <motion.p
-//         initial={{ opacity: 0 }}
-//         animate={{ opacity: 1 }}
-//         transition={{ delay: 0.6 }}
-//       >
-//         I design and build clean, scalable and AI-powered web applications.
-//       </motion.p>
-
-//       <motion.button
-//         onClick={scrollToProjects}
-//         whileHover={{ scale: 1.05 }}
-//         whileTap={{ scale: 0.95 }}
-//       >
-//         View Work →
-//       </motion.button>
-
-//     </section>
-//   );
-// }
-
-// export default Hero;
-
-
 import "../styless/Hero.css";
+import { motion } from "framer-motion";
 
 function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-container">
-        
+
         {/* LEFT CONTENT */}
-        <div className="hero-text">
-          <h1>Hi, I’m Shubham 👋</h1>
-          <h2>Full Stack Developer</h2>
+        <motion.div
+          className="hero-text"
+          initial={{ opacity: 0, x: -60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1>
+            Building Modern <br />
+            Web Experiences.
+          </h1>
+
+          <h2>Full Stack & AI Developer</h2>
+
           <p>
-            I design and build clean, scalable and AI-powered web applications.
+            I create scalable, responsive and AI-powered web applications
+            using modern technologies like React.js, Node.js, MongoDB,
+            Express.js and OpenAI APIs.
           </p>
 
-          <a href="#projects" className="hero-btn">View Work →</a>
-        </div>
+          <div className="hero-buttons">
+            <a href="#projects" className="hero-btn">
+              View Projects
+            </a>
+
+            <a href="#contact" className="hero-outline-btn">
+              Contact Me
+            </a>
+          </div>
+        </motion.div>
 
         {/* RIGHT IMAGE */}
-        <div className="hero-image">
-          <img src="../profile.jpeg" alt="Shubham" />
-        </div>
+        <motion.div
+          className="hero-image"
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <img src="/profile.jpeg" alt="Shubham" />
+        </motion.div>
 
       </div>
     </section>

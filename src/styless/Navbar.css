@@ -1,61 +1,99 @@
-/* NAVBAR CONTAINER */
 .navbar {
+
+  width: 100%;
+  padding: 18px 10%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10% 40px;
 
-  /* Apple-style glass effect */
-  background:skyblue;
-  
-
-  
+  position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 999;
 
-  border-bottom: 1px solid #e5e5e5;
+  background: rgba(15, 23, 42, 0.6);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* LOGO */
 .logo {
-  font-size: 20px;
-  font-weight: 600;
-  color: #1d1d1f;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #ffffff;
 }
 
-/* NAV LINKS */
+/* NAVIGATION */
 .nav-links {
+
   display: flex;
-  gap: 30px;
+  align-items: center;
+
+  gap: 35px;
+
   list-style: none;
 }
 
 /* LINKS */
 .nav-links a {
-  text-decoration: none;
-  color: #6e6e73;
-  font-size: 14px;
-  font-weight: 500;
+
   position: relative;
-  transition: 0.3s;
+
+  color: #cbd5e1;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: 0.3s ease;
 }
 
-/* HOVER EFFECT (APPLE STYLE UNDERLINE) */
+/* HOVER */
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* ANIMATED UNDERLINE */
 .nav-links a::after {
+
   content: "";
+
   position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
   width: 0%;
   height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: #0071e3;
-  transition: 0.3s;
-}
 
-.nav-links a:hover {
-  color: #1d1d1f;
+  background: #3b82f6;
+
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
 }
