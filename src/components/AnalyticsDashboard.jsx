@@ -1,14 +1,23 @@
 import "../styless/AnalyticsDashboard.css";
 import { useEffect, useState } from "react";
+import { getLocalAnalytics } from "../analytics";
 
 function AnalyticsDashboard() {
   const [analytics, setAnalytics] = useState(null);
   const [error, setError] = useState("");
 
   useEffect(() => {
+    if (process.env.NODE_ENV === "development") {
+      const update = () => setAnalytics(getLocalAnalytics());
+      update();
+      window.addEventListener("portfolio-analytics-updated", update);
+      return () => window.removeEventListener("portfolio-analytics-updated", update);
+    }
+
     fetch("/api/admin/analytics", { credentials: "include" })
       .then(async (response) => {
-        const data = await response.json();
+        const contentType = response.headers.get("content-type") || "";
+        const data = contentType.includes("application/json") ? await response.json() : { error: "Analytics API is unavailable. Deploy with the configured Vercel API." };
         if (!response.ok) throw new Error(data.error || "Could not load analytics.");
         setAnalytics(data);
       })
