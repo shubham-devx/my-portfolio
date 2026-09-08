@@ -1,5 +1,6 @@
 import "../styless/Projects.css";
 import { motion } from "framer-motion";
+import { trackAnalytics } from "../analytics";
 
 function Projects({ projects }) {
   return (
@@ -16,6 +17,7 @@ function Projects({ projects }) {
           <motion.div
             className="project-card"
             key={index}
+            onClick={() => trackAnalytics("project_view", { project: project.name })}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05 }}

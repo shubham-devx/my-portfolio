@@ -1,4 +1,5 @@
 import "../styless/Resume.css";
+import { trackAnalytics } from "../analytics";
 
 function Resume({ resumes }) {
   return (
@@ -8,7 +9,7 @@ function Resume({ resumes }) {
 
       <div className="resume-container">
 
-        {resumes.map((resume, index) => <div className="resume-card" key={index}><h3>{resume.title}</h3><p>{resume.description}</p><a href={resume.link} target="_blank" rel="noopener noreferrer">View Resume</a></div>)}
+        {resumes.map((resume, index) => <div className="resume-card" key={index}><h3>{resume.title}</h3><p>{resume.description}</p><a href={resume.link} onClick={() => trackAnalytics("resume_download", { resume: resume.title })} target="_blank" rel="noopener noreferrer">View Resume</a></div>)}
 
       </div>
 

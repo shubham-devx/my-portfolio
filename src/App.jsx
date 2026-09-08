@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -9,23 +9,44 @@ import Resume from "./components/Resume";
 import Certifications from "./components/Certifications";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import GitHubActivity from "./components/GitHubActivity";
+import AnalyticsDashboard from "./components/AnalyticsDashboard";
 import { loadPortfolio, savePortfolio } from "./portfolioData";
+import { trackVisitOnce } from "./analytics";
 import "./premium.css";
 
 function Admin({ portfolio, setPortfolio }) {
   const [authenticated, setAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const login = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch("/api/admin/login", { method: "POST", headers: { "Content-Type": "application/json" }, credentials: "include", body: JSON.stringify({ password }) });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || "Login failed");
+      setAuthenticated(true);
+      setMessage("");
+    } catch (error) {
+      setMessage(error.message);
+    }
+  };
 
-  if (!authenticated) return <main className="admin-login"><form onSubmit={(event) => { event.preventDefault(); password === "love123" ? setAuthenticated(true) : setMessage("Incorrect password"); }}><p className="eyebrow">PRIVATE AREA</p><h1>Admin access</h1><p>Manage every section of your public portfolio.</p><input autoFocus type="password" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)} /><button type="submit">Continue</button>{message && <small>{message}</small>}<a href="/">Back to portfolio</a></form></main>;
+  if (!authenticated) return <main className="admin-login"><form onSubmit={login}><p className="eyebrow">PRIVATE AREA</p><h1>Admin access</h1><p>Manage every section of your public portfolio.</p><input autoFocus type="password" placeholder="Password" value={password} onChange={(event) => setPassword(event.target.value)} /><button type="submit">Continue</button>{message && <small>{message}</small>}<a href="/">Back to portfolio</a></form></main>;
 
   const update = (section, field, value) => setPortfolio({ ...portfolio, [section]: { ...portfolio[section], [field]: value } });
   const updateItem = (section, index, field, value) => setPortfolio({ ...portfolio, [section]: portfolio[section].map((item, itemIndex) => itemIndex === index ? { ...item, [field]: value } : item) });
   const removeItem = (section, index) => setPortfolio({ ...portfolio, [section]: portfolio[section].filter((_, itemIndex) => itemIndex !== index) });
   const addItem = (section, item) => setPortfolio({ ...portfolio, [section]: [...portfolio[section], item] });
   const save = (event) => { event.preventDefault(); savePortfolio(portfolio); setMessage("All changes saved. Open the portfolio to see them."); };
+  const logout = async () => {
+    await fetch("/api/admin/logout", { method: "POST", credentials: "include" }).catch(() => {});
+    setAuthenticated(false);
+    setPassword("");
+    setMessage("");
+  };
 
-  return <main className="admin-page"><header><strong>SV / STUDIO</strong><a href="/">View portfolio</a></header><div className="admin-content"><p className="eyebrow">CONTENT CONTROL</p><h1>Shape your<br /><em>public presence.</em></h1><p className="admin-note">Edit any section below. Changes stay in this browser and appear on the public portfolio after saving.</p><form onSubmit={save}>
+  return <main className="admin-page"><header><strong>SV / STUDIO</strong><div className="admin-header-actions"><a href="/">View portfolio</a><button type="button" className="admin-logout" onClick={logout}>Log out</button></div></header><div className="admin-content"><p className="eyebrow">CONTENT CONTROL</p><h1>Shape your<br /><em>public presence.</em></h1><p className="admin-note">Edit any section below. Changes stay in this browser and appear on the public portfolio after saving.</p><AnalyticsDashboard /><form onSubmit={save}>
     <AdminSection title="Profile and hero">
       <Field label="Name" value={portfolio.profile.name} onChange={(value) => update("profile", "name", value)} />
       <Field label="Role" value={portfolio.profile.role} onChange={(value) => update("profile", "role", value)} />
@@ -67,29 +88,55 @@ function Field({ label, value, onChange, multiline = false }) { const Control = 
 
 function App() {
   const [portfolio, setPortfolio] = useState(loadPortfolio);
+  const [recruiterView, setRecruiterView] = useState(false);
+  const [githubView, setGithubView] = useState(false);
+
+  useEffect(() => {
+    if (window.location.pathname !== "/admin") trackVisitOnce();
+  }, []);
+
+  const toggleGithubView = () => {
+    setGithubView((current) => {
+      const next = !current;
+      if (next) window.setTimeout(() => document.getElementById("github-activity")?.scrollIntoView({ behavior: "smooth", block: "start" }), 0);
+      return next;
+    });
+  };
 
   if (window.location.pathname === "/admin") {
     return <Admin portfolio={portfolio} setPortfolio={setPortfolio} />;
   }
 
   return (
-    <div className="app">
+    <div className={`app ${recruiterView ? "recruiter-mode" : ""}`}>
 
-      <Navbar profile={portfolio.profile} />
+      <Navbar profile={portfolio.profile} recruiterView={recruiterView} githubView={githubView} onToggleRecruiter={() => setRecruiterView((current) => !current)} onToggleGithub={toggleGithubView} />
 
-      <Hero profile={portfolio.profile} />
+      {recruiterView ? (
+        <>
+          <Skills skills={portfolio.skills} />
+          <Projects projects={portfolio.projects} />
+          <Resume resumes={portfolio.resumes} />
+          <Contact contact={portfolio.contact} />
+        </>
+      ) : (
+        <>
+          <Hero profile={portfolio.profile} />
 
-      <About about={portfolio.about} />
+          <About about={portfolio.about} />
 
-      <Skills skills={portfolio.skills} />
+          <Skills skills={portfolio.skills} />
+          {githubView && <GitHubActivity github={portfolio.contact.github} />}
 
-      <Resume resumes={portfolio.resumes} />
+          <Resume resumes={portfolio.resumes} />
 
-      <Certifications certifications={portfolio.certifications} />
+          <Certifications certifications={portfolio.certifications} />
 
-      <Projects projects={portfolio.projects} />
+          <Projects projects={portfolio.projects} />
 
-      <Contact contact={portfolio.contact} />
+          <Contact contact={portfolio.contact} />
+        </>
+      )}
 
     </div>
   );

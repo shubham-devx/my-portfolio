@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+## Secure admin analytics on Vercel
+
+The admin area uses Vercel serverless API routes. Configure an Upstash Redis/Vercel KV store, then add the variables from `.env.example` to the Vercel project environment. `ADMIN_PASSWORD` and `ADMIN_SESSION_SECRET` must be long random values and must never be committed. The analytics dashboard is available at `/admin` after server authentication.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
