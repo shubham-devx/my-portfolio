@@ -149,15 +149,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 @media (max-width: 600px) {
-  .navbar { height: 68px; padding: 0 6%; }
-  .logo { flex-shrink: 0; font-size: 12px !important; }
-  .nav-links { gap: 9px; }
+  .navbar { height: auto; min-height: 88px; padding: 13px 6% 12px; flex-wrap: wrap; align-content: center; row-gap: 12px; }
+  .logo { width: 100%; font-size: 12px !important; }
+  .nav-links { width: 100%; justify-content: flex-start; gap: 8px 11px; flex-wrap: wrap; }
   .nav-links a { font-size: 8px; letter-spacing: .02em; }
   .recruiter-toggle, .github-toggle { padding: 8px 7px; font-size: 7px; }
   .nav-links li:nth-child(2), .nav-links li:nth-child(3) { display: list-item; }
   .nav-admin { padding-left: 8px; }
   .app section { padding: 90px 6% !important; }
-  .hero { min-height: auto; padding-top: 135px !important; padding-bottom: 110px !important; }
+  .hero { min-height: auto; padding-top: 155px !important; padding-bottom: 110px !important; }
   .hero::before { left: 6%; height: 22%; }
   .hero-image { order: 0; }
   .hero-text h1 { font-size: clamp(46px, 14vw, 68px) !important; }
