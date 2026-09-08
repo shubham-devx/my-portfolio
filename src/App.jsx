@@ -28,6 +28,8 @@ function Admin({ portfolio, setPortfolio }) {
     }
     try {
       const response = await fetch("/api/admin/login", { method: "POST", headers: { "Content-Type": "application/json" }, credentials: "include", body: JSON.stringify({ password }) });
+      const contentType = response.headers.get("content-type") || "";
+      if (!contentType.includes("application/json")) throw new Error("The deployed admin API is unavailable. Redeploy the latest Vercel deployment or check Deployment Protection.");
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Login failed");
       setAuthenticated(true);
