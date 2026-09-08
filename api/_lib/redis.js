@@ -1,8 +1,8 @@
 async function redis(command, args = []) {
-  const url = process.env.KV_REST_API_URL;
-  const token = process.env.KV_REST_API_TOKEN;
+  const url = process.env.KV_REST_API_URL || process.env.EV_KV_REST_API_URL || process.env.EV_KV_URL;
+  const token = process.env.KV_REST_API_TOKEN || process.env.EV_KV_REST_API_TOKEN;
 
-  if (!url || !token) throw new Error("Analytics storage is not configured.");
+  if (!url || !token) throw new Error("Analytics storage needs a read/write REST URL and token.");
 
   const response = await fetch(url, {
     method: "POST",
