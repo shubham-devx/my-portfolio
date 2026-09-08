@@ -1,0 +1,208 @@
+/* SECTION */
+.projects {
+  position: relative;
+}
+
+/* HEADER */
+.projects h2 {
+
+  text-align: center;
+
+  font-size: 52px;
+
+  margin-bottom: 70px;
+
+  color: #ffffff;
+}
+
+/* GRID */
+.projects-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 35px;
+}
+
+/* CARD */
+.project-card {
+
+  position: relative;
+
+  padding: 35px;
+
+  border-radius: 28px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  overflow: hidden;
+
+  transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.project-card:hover {
+
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(59,130,246,0.45);
+
+  box-shadow:
+    0 20px 50px rgba(37,99,235,0.18);
+}
+
+/* TOP GLOW */
+.project-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -100px;
+  right: -100px;
+
+  width: 220px;
+  height: 220px;
+
+  background:
+    radial-gradient(
+      rgba(59,130,246,0.25),
+      transparent
+    );
+
+  z-index: 0;
+}
+
+/* TITLE */
+.project-card h3 {
+
+  position: relative;
+  z-index: 1;
+
+  font-size: 28px;
+
+  margin-bottom: 18px;
+
+  color: #ffffff;
+}
+
+/* DESCRIPTION */
+.project-card p {
+
+  position: relative;
+  z-index: 1;
+
+  color: #94a3b8;
+
+  line-height: 1.8;
+
+  margin-bottom: 22px;
+}
+
+/* TECH STACK */
+.tech {
+
+  position: relative;
+  z-index: 1;
+
+  display: inline-block;
+
+  padding: 10px 16px;
+
+  border-radius: 14px;
+
+  background:
+    rgba(37,99,235,0.12);
+
+  color: #60a5fa;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 28px;
+}
+
+/* LINKS */
+.project-links {
+
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+
+  gap: 18px;
+}
+
+/* BUTTONS */
+.project-links a {
+
+  text-decoration: none;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+/* LIVE BUTTON */
+.project-links a:first-child {
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #3b82f6
+    );
+
+  color: white;
+}
+
+/* CODE BUTTON */
+.project-links a:last-child {
+
+  border:
+    1px solid rgba(255,255,255,0.12);
+
+  color: #ffffff;
+}
+
+/* HOVER */
+.project-links a:hover {
+
+  transform:
+    translateY(-3px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .projects h2 {
+    font-size: 38px;
+  }
+
+  .project-card {
+    padding: 28px;
+  }
+
+  .project-card h3 {
+    font-size: 24px;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+  }
+}

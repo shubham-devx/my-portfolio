@@ -1,0 +1,187 @@
+/* SECTION */
+.contact {
+  position: relative;
+}
+
+/* HEADER */
+.contact-header {
+
+  text-align: center;
+
+  margin-bottom: 70px;
+}
+
+/* TITLE */
+.contact-header h2 {
+
+  font-size: 52px;
+
+  margin-bottom: 20px;
+
+  color: #ffffff;
+}
+
+/* TEXT */
+.contact-header p {
+
+  max-width: 700px;
+
+  margin: auto;
+
+  color: #94a3b8;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+/* FORM */
+.contact-form {
+
+  max-width: 800px;
+
+  margin: auto;
+
+  padding: 45px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255,255,255,0.05);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea {
+
+  width: 100%;
+
+  padding: 18px 20px;
+
+  border-radius: 16px;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  background:
+    rgba(255,255,255,0.04);
+
+  color: white;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+/* PLACEHOLDER */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+
+  color: #94a3b8;
+}
+
+/* FOCUS */
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+  border-color:
+    rgba(59,130,246,0.5);
+
+  box-shadow:
+    0 0 0 4px rgba(37,99,235,0.1);
+}
+
+/* BUTTON */
+.contact-form button {
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #3b82f6
+    );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.contact-form button:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(37,99,235,0.3);
+}
+
+/* LINKS */
+.contact-links {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-top: 40px;
+}
+
+/* LINK */
+.contact-links a {
+
+  text-decoration: none;
+
+  color: #94a3b8;
+
+  font-weight: 500;
+
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+.contact-links a:hover {
+
+  color: #60a5fa;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .contact-header h2 {
+    font-size: 38px;
+  }
+
+  .contact-form {
+    padding: 28px;
+  }
+
+  .contact-links {
+    flex-wrap: wrap;
+  }
+}
