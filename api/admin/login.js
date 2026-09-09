@@ -14,6 +14,7 @@ module.exports = async function login(request, response) {
     const { password = "" } = readBody(request);
     const expected = process.env.ADMIN_PASSWORD;
     if (!expected) return response.status(503).json({ error: "Admin authentication is not configured." });
+    if (!process.env.ADMIN_SESSION_SECRET) return response.status(503).json({ error: "Admin session signing is not configured." });
 
     const address = String(request.headers["x-forwarded-for"] || request.socket?.remoteAddress || "unknown").split(",")[0].trim();
     const addressKey = crypto.createHash("sha256").update(address).digest("hex");
@@ -29,7 +30,7 @@ module.exports = async function login(request, response) {
     await redis("DEL", [`admin:login-attempts:${addressKey}`]);
     response.setHeader("Set-Cookie", sessionCookie(createSession()));
     return response.status(200).json({ authenticated: true });
-  } catch {
-    return response.status(400).json({ error: "Invalid login request" });
+  } catch (error) {
+    return response.status(503).json({ error: error.message || "Admin authentication service is unavailable." });
   }
 };
