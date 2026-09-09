@@ -33,6 +33,7 @@ export const defaultPortfolio = {
     { name: "AI Gym Trainer", description: "AI-powered fitness assistant for personalized workouts.", tech: "MERN | OpenAI | Prompt Engineering", live: "https://fintness-tracker-agent-client.vercel.app", github: "https://github.com/shubham-devx" },
     { name: "Digital Temple", description: "Virtual worship platform with interactive features.", tech: "React | Router | Vercel", live: "https://digital-temple.vercel.app", github: "https://github.com/shubham-devx/digitalTemple.git" },
     { name: "SpamSense AI", description: "AI-powered SMS fraud detection system.", tech: "Python | Streamlit | Scikit-learn | NLP", live: "https://ai-scam-detector-38gup2dgmpwfpxaucro6sq.streamlit.app/", github: "https://github.com/shubham-devx/ai-scam-detector.git" },
+    { name: "Couple Capsule", description: "A private digital space for couples to preserve memories, letters, countdowns, promises, timelines, and special moments.", tech: "React.js | JavaScript | CSS | Framer Motion | LocalStorage", live: "https://love-birds-psi.vercel.app/", github: "https://github.com/shubham-devx/love-birds.git" },
   ],
   certifications: [
     { title: "AI Mastery Course", link: "https://drive.google.com/file/d/1zzGZamCIcNlVQdYHY2gYL78pxe8AabEK/view" },
@@ -61,6 +62,7 @@ export function loadPortfolio() {
         ...saved,
         profile: { ...defaultPortfolio.profile, ...saved.profile },
         about: { ...defaultPortfolio.about, ...saved.about },
+        projects: [...(saved.projects || []), ...defaultPortfolio.projects.filter((project) => !(saved.projects || []).some((savedProject) => savedProject.name === project.name))],
         contact: { ...defaultPortfolio.contact, ...saved.contact },
       };
     }
