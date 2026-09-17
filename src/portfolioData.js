@@ -34,6 +34,7 @@ export const defaultPortfolio = {
     { name: "Digital Temple", description: "Virtual worship platform with interactive features.", tech: "React | Router | Vercel", live: "https://digital-temple.vercel.app", github: "https://github.com/shubham-devx/digitalTemple.git" },
     { name: "SpamSense AI", description: "AI-powered SMS fraud detection system.", tech: "Python | Streamlit | Scikit-learn | NLP", live: "https://ai-scam-detector-38gup2dgmpwfpxaucro6sq.streamlit.app/", github: "https://github.com/shubham-devx/ai-scam-detector.git" },
     { name: "Couple Capsule", description: "A private digital space for couples to preserve memories, letters, countdowns, promises, timelines, and special moments.", tech: "React.js | JavaScript | CSS | Framer Motion | LocalStorage", live: "https://love-birds-psi.vercel.app/", github: "https://github.com/shubham-devx/love-birds.git" },
+    { name: "Scanora", description: "Frontend Developer passionate about building clean, modern, and privacy-first web experiences. Scanora is a QR code dashboard with live QR generation, downloads, local activity tracking, and responsive UI design.", tech: "React | TypeScript | Vite | Vercel", live: "https://qr-code-generator-sigma-flax.vercel.app", github: "https://github.com/shubham-devx" },
   ],
   certifications: [
     { title: "AI Mastery Course", link: "https://drive.google.com/file/d/1zzGZamCIcNlVQdYHY2gYL78pxe8AabEK/view" },
