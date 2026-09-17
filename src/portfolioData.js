@@ -77,3 +77,32 @@ export function loadPortfolio() {
 export function savePortfolio(portfolio) {
   window.localStorage.setItem("portfolio-data", JSON.stringify(portfolio));
 }
+
+export async function loadSharedPortfolio() {
+  if (process.env.NODE_ENV === "development") return null;
+
+  try {
+    const response = await fetch("/api/portfolio", { cache: "no-store" });
+    if (!response.ok) return null;
+    const { portfolio } = await response.json();
+    return portfolio;
+  } catch {
+    return null;
+  }
+}
+
+export async function saveSharedPortfolio(portfolio) {
+  if (process.env.NODE_ENV === "development") {
+    savePortfolio(portfolio);
+    return;
+  }
+
+  const response = await fetch("/api/portfolio", {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify({ portfolio }),
+  });
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || "Could not save portfolio.");
+}

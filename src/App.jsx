@@ -11,7 +11,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import GitHubActivity from "./components/GitHubActivity";
 import AnalyticsDashboard from "./components/AnalyticsDashboard";
-import { loadPortfolio, savePortfolio } from "./portfolioData";
+import { loadPortfolio, loadSharedPortfolio, saveSharedPortfolio } from "./portfolioData";
 import { trackVisitOnce } from "./analytics";
 import "./premium.css";
 
@@ -45,7 +45,15 @@ function Admin({ portfolio, setPortfolio }) {
   const updateItem = (section, index, field, value) => setPortfolio({ ...portfolio, [section]: portfolio[section].map((item, itemIndex) => itemIndex === index ? { ...item, [field]: value } : item) });
   const removeItem = (section, index) => setPortfolio({ ...portfolio, [section]: portfolio[section].filter((_, itemIndex) => itemIndex !== index) });
   const addItem = (section, item) => setPortfolio({ ...portfolio, [section]: [...portfolio[section], item] });
-  const save = (event) => { event.preventDefault(); savePortfolio(portfolio); setMessage("All changes saved. Open the portfolio to see them."); };
+  const save = async (event) => {
+    event.preventDefault();
+    try {
+      await saveSharedPortfolio(portfolio);
+      setMessage("All changes saved. Open the portfolio to see them.");
+    } catch (error) {
+      setMessage(error.message);
+    }
+  };
   const logout = async () => {
     await fetch("/api/admin/logout", { method: "POST", credentials: "include" }).catch(() => {});
     setAuthenticated(false);
@@ -53,7 +61,7 @@ function Admin({ portfolio, setPortfolio }) {
     setMessage("");
   };
 
-  return <main className="admin-page"><header><strong>SV / STUDIO</strong><div className="admin-header-actions"><a href="/">View portfolio</a><button type="button" className="admin-logout" onClick={logout}>Log out</button></div></header><div className="admin-content"><p className="eyebrow">CONTENT CONTROL</p><h1>Shape your<br /><em>public presence.</em></h1><p className="admin-note">Edit any section below. Changes stay in this browser and appear on the public portfolio after saving.</p><AnalyticsDashboard /><form onSubmit={save}>
+  return <main className="admin-page"><header><strong>SV / STUDIO</strong><div className="admin-header-actions"><a href="/">View portfolio</a><button type="button" className="admin-logout" onClick={logout}>Log out</button></div></header><div className="admin-content"><p className="eyebrow">CONTENT CONTROL</p><h1>Shape your<br /><em>public presence.</em></h1><p className="admin-note">Edit any section below. Changes are shared with every device after saving.</p><AnalyticsDashboard /><form onSubmit={save}>
     <AdminSection title="Profile and hero">
       <Field label="Name" value={portfolio.profile.name} onChange={(value) => update("profile", "name", value)} />
       <Field label="Role" value={portfolio.profile.role} onChange={(value) => update("profile", "role", value)} />
@@ -100,6 +108,12 @@ function App() {
 
   useEffect(() => {
     if (window.location.pathname !== "/admin") trackVisitOnce();
+  }, []);
+
+  useEffect(() => {
+    loadSharedPortfolio().then((sharedPortfolio) => {
+      if (sharedPortfolio) setPortfolio((current) => ({ ...current, ...sharedPortfolio }));
+    });
   }, []);
 
   const toggleGithubView = () => {
