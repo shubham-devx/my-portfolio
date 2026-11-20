@@ -1,17 +1,17 @@
 export const defaultPortfolio = {
   profile: {
     name: "Shubham Verma",
-    role: "Full Stack & AI Developer",
-    headline: "Building digital products with clarity.",
-    intro: "I design and ship thoughtful digital products that turn complex ideas into clear, useful experiences.",
+    role: "AI Engineer at AKGEC Skills Foundation (ASF)",
+    headline: "Automating ideas into intelligent digital experiences.",
+    intro: "I automate workflows, build dynamic websites and develop intelligent agents that turn complex ideas into useful, scalable digital products.",
     image: "/profile.jpeg",
   },
   about: {
-    intro: "Passionate about creating modern web applications, solving real-world problems and building impactful digital experiences.",
+    intro: "As an AI Engineer at AKGEC Skills Foundation (ASF), I work at the intersection of artificial intelligence, automation and web engineering—turning ideas into dynamic products and intelligent agents.",
     cards: [
-      { title: "Full Stack Development", desc: "Building scalable MERN stack applications with modern UI & backend architecture." },
-      { title: "AI Integration", desc: "Exploring AI-powered solutions using OpenAI APIs and intelligent automation." },
-      { title: "Growth Mindset", desc: "Focused on continuous learning, clean code practices and impactful products." },
+      { title: "Automation & AI Agents", desc: "Designing intelligent workflows and building agents that automate repetitive tasks and improve how people work." },
+      { title: "Dynamic Web Experiences", desc: "Creating responsive, interactive websites that connect thoughtful interfaces with useful backend functionality." },
+      { title: "AI Product Engineering", desc: "Turning ideas into practical digital products with AI APIs, automation, full-stack development and rapid experimentation." },
     ],
   },
   skills: [

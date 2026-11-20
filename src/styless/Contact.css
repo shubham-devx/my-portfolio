@@ -140,6 +140,11 @@
     0 15px 35px rgba(37,99,235,0.3);
 }
 
+.contact-form button:disabled { opacity: .65; cursor: wait; transform: none; }
+.form-status { margin: 0; font-size: 14px; line-height: 1.5; }
+.form-status.success { color: #67e8f9; }
+.form-status.error { color: #fda4af; }
+
 /* LINKS */
 .contact-links {
 

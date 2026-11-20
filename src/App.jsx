@@ -103,7 +103,6 @@ function Field({ label, value, onChange, multiline = false }) { const Control = 
 
 function App() {
   const [portfolio, setPortfolio] = useState(loadPortfolio);
-  const [recruiterView, setRecruiterView] = useState(false);
   const [githubView, setGithubView] = useState(false);
 
   useEffect(() => {
@@ -128,39 +127,17 @@ function App() {
     return <Admin portfolio={portfolio} setPortfolio={setPortfolio} />;
   }
 
-  return (
-    <div className={`app ${recruiterView ? "recruiter-mode" : ""}`}>
-
-      <Navbar profile={portfolio.profile} recruiterView={recruiterView} githubView={githubView} onToggleRecruiter={() => setRecruiterView((current) => !current)} onToggleGithub={toggleGithubView} />
-
-      {recruiterView ? (
-        <>
-          <Skills skills={portfolio.skills} />
-          <Projects projects={portfolio.projects} />
-          <Resume resumes={portfolio.resumes} />
-          <Contact contact={portfolio.contact} />
-        </>
-      ) : (
-        <>
-          <Hero profile={portfolio.profile} />
-
-          <About about={portfolio.about} />
-
-          <Skills skills={portfolio.skills} />
-          {githubView && <GitHubActivity github={portfolio.contact.github} />}
-
-          <Resume resumes={portfolio.resumes} />
-
-          <Certifications certifications={portfolio.certifications} />
-
-          <Projects projects={portfolio.projects} />
-
-          <Contact contact={portfolio.contact} />
-        </>
-      )}
-
-    </div>
-  );
+  return <div className="app">
+    <Navbar profile={portfolio.profile} githubView={githubView} onToggleGithub={toggleGithubView} />
+    <Hero profile={portfolio.profile} />
+    <About about={portfolio.about} />
+    <Skills skills={portfolio.skills} />
+    {githubView && <GitHubActivity github={portfolio.contact.github} />}
+    <Resume resumes={portfolio.resumes} />
+    <Certifications certifications={portfolio.certifications} />
+    <Projects projects={portfolio.projects} />
+    <Contact contact={portfolio.contact} />
+  </div>;
 }
 
 export default App;
